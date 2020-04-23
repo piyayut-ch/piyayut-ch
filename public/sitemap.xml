@@ -3,19 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/project/project1/</loc>
-  </url>
-  
-  <url>
-    <loc>/project/project2/</loc>
-  </url>
-  
-  <url>
-    <loc>/project/project3/</loc>
-  </url>
-  
-  <url>
-    <loc>/project/project4/</loc>
+    <loc>/project/oaedash/</loc>
   </url>
   
   <url>
@@ -59,47 +47,15 @@
   </url>
   
   <url>
-    <loc>/tags/bootstrap/</loc>
+    <loc>/tags/flexdashboard/</loc>
   </url>
   
   <url>
-    <loc>/tags/css/</loc>
-  </url>
-  
-  <url>
-    <loc>/tags/go/</loc>
-  </url>
-  
-  <url>
-    <loc>/tags/golang/</loc>
-  </url>
-  
-  <url>
-    <loc>/tags/highlight-js/</loc>
-  </url>
-  
-  <url>
-    <loc>/tags/html/</loc>
-  </url>
-  
-  <url>
-    <loc>/tags/hugo/</loc>
-  </url>
-  
-  <url>
-    <loc>/tags/js/</loc>
+    <loc>/tags/oae/</loc>
   </url>
   
   <url>
     <loc>/project/</loc>
-  </url>
-  
-  <url>
-    <loc>/tags/responsive/</loc>
-  </url>
-  
-  <url>
-    <loc>/tags/syntax-highlighting/</loc>
   </url>
   
   <url>
