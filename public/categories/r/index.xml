@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>R on Piyayut Chitchumnong</title>
+    <link>/categories/r/</link>
+    <description>Recent content in R on Piyayut Chitchumnong</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 22 Apr 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/r/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>การติดตั้ง R และ Jupyter</title>
+      <link>/post/2020-04-22-setup-r/</link>
+      <pubDate>Wed, 22 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2020-04-22-setup-r/</guid>
+      <description>เกริ่น R เป็นภาษาคอมพิวเตอร์ที่นิยมใช้ในการวิเคราะห์ทางสถิติ เศรษฐมิติ รวมถึง Data Science ข้อดีของ R คือ ฟรี และ มี packages ที่มีความสามารถหลากหลาย เช่น Data Wrangling (การจัดการข้อมูล) Data Visualization (การนำเสนอข้อมูลด้วยภาพ) Model (การทำแบบจำลองเพื่อวิเคราะห์หรือพยากรณ์) เป็นต้น
+ในการใช้งานจริง เราจะใช้ R ผ่านเครื่องมือช่วยที่เรียกว่า IDE (Integrated Development Environment) โดยมีความสามารถ เช่น สร้างและแก้ไข script โปรแกรม ประมวลผล แสดงผลทั้งรูปแบบข้อมูลและกราฟฟิก เป็นต้น
+สำหรับ R RStudio เป็น IDE ที่ได้รับความนิยม แต่มีข้อจำกัดในการใช้ตัวห้อยตัวลอยในภาษาไทย ไม่สะดวกต่อการ comment เป็นภาษาไทย ในที่นี้จึงขอแนะนำให้ใช้ R กับ Jupyter ซึ่งเป็น IDE ที่มีข้อดี คือ เป็น web-based interactive notebook สามาถ coding พร้อมทั้งแสดงผลได้ในไฟล์เดียวกัน และยังสามารถใช้ markdown ในการเขียนข้อความอธิบาย ได้อีกด้วย นอกจากนี้ Jupyter ยังสามารถใช้กับภาษาอื่นได้ด้วย (Python Julia หรือ Stata)</description>
+    </item>
+    
+    <item>
+      <title>Hello R Markdown</title>
+      <link>/post/2015-07-23-r-rmarkdown/</link>
+      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
+      
+      <guid>/post/2015-07-23-r-rmarkdown/</guid>
+      <description>R MarkdownThis is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
+You can embed an R code chunk like this:
+summary(cars)## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.</description>
+    </item>
+    
+  </channel>
+</rss>

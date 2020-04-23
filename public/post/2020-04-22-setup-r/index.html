@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>การติดตั้ง R และ Jupyter</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Prompt', sans-serif;
+        background-color: snow;
+    }
+
+    :root {
+        --accent: royalblue;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Prompt">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/zenburn.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/r.min.js"></script>
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.69.0" />
+        
+
+        
+
+        
+            <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+
+        
+
+    </head>
+
+    <body>
+        
+
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand visible-xs" href="#">การติดตั้ง R และ Jupyter</a>
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse">
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/about/">About</a></li>
+                            
+                                <li><a href="/post/">Posts</a></li>
+                            
+                                <li><a href="/project/">Projects</a></li>
+                            
+                        </ul>
+                    
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="mailto:piyayut.ch@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/piyayut-ch/"><i class="fa fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://twitter.com/piyayutch/"><i class="fa fa-twitter"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/in/username/"><i class="fa fa-linkedin"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.stackoverflow.com/username/"><i class="fa fa-stack-overflow"></i></a></li>
+                            
+                        </ul>
+                    
+                </div>
+            </div>
+        </nav>
+
+
+<main>
+
+    <div>
+        <h2>การติดตั้ง R และ Jupyter</h2>
+        <h5>April 22, 2020</h5>
+        
+<a href="/tags/r"><kbd class="item-tag">R</kbd></a>
+
+<a href="/tags/jupyter"><kbd class="item-tag">Jupyter</kbd></a>
+
+
+    </div>
+
+    <div align="start" class="content"><h2 id="เกริ่น">เกริ่น</h2>
+<p><code>R</code> เป็นภาษาคอมพิวเตอร์ที่นิยมใช้ในการวิเคราะห์ทางสถิติ เศรษฐมิติ รวมถึง Data Science ข้อดีของ <code>R</code> คือ <strong>ฟรี</strong> และ มี <strong>packages</strong> ที่มีความสามารถหลากหลาย เช่น Data Wrangling (การจัดการข้อมูล) Data Visualization (การนำเสนอข้อมูลด้วยภาพ) Model (การทำแบบจำลองเพื่อวิเคราะห์หรือพยากรณ์) เป็นต้น</p>
+<p>ในการใช้งานจริง เราจะใช้ <code>R</code> ผ่านเครื่องมือช่วยที่เรียกว่า IDE (Integrated Development Environment) โดยมีความสามารถ เช่น สร้างและแก้ไข script โปรแกรม ประมวลผล แสดงผลทั้งรูปแบบข้อมูลและกราฟฟิก เป็นต้น</p>
+<p>สำหรับ <code>R</code> <a href="https://rstudio.com">RStudio</a> เป็น IDE ที่ได้รับความนิยม แต่มีข้อจำกัดในการใช้ตัวห้อยตัวลอยในภาษาไทย ไม่สะดวกต่อการ comment เป็นภาษาไทย ในที่นี้จึงขอแนะนำให้ใช้ <code>R</code> กับ <a href="https://jupyter.org">Jupyter</a> ซึ่งเป็น IDE ที่มีข้อดี คือ เป็น web-based interactive notebook สามาถ coding พร้อมทั้งแสดงผลได้ในไฟล์เดียวกัน และยังสามารถใช้ <code>markdown</code> ในการเขียนข้อความอธิบาย ได้อีกด้วย นอกจากนี้ <code>Jupyter</code> ยังสามารถใช้กับภาษาอื่นได้ด้วย (<code>Python</code> <code>Julia</code> หรือ <code>Stata</code>)</p>
+<p>ในการติดตั้งแนะนำให้ ติดตั้ง <code>Miniconda</code> ก่อน เพื่อติดตั้ง <code>Jupyter</code> จากนั้นจึงติดตั้ง <code>R</code> พร้อมทั้งติดตั้ง IRkernel เพื่อใช้ <code>R</code> ได้ใน <code>Jupyter</code></p>
+<h2 id="miniconda">Miniconda</h2>
+<ul>
+<li>install miniconda
+<ul>
+<li>download <a href="https://docs.conda.io/en/latest/miniconda.html">miniconda3</a> เลือกระหว่าง <code>Miniconda3 Windows 64-bit</code> หรือ <code>Miniconda3 Windows 32-bit</code> โดยดูว่าเครื่องเราใช้ windows system อะไร <img src="../../images/find_os.gif" alt="find_os" /></li>
+<li>เปิดไฟล์ installer</li>
+<li>click Next</li>
+<li>click I Agree</li>
+<li>เลือก Just Me และ click Next</li>
+<li>เปลี่ยน Desitnation Folder เป็น <code>C:\Users\[USERNAME]\Miniconda3</code> โดยที่ USERNAME หมายถึง ชื่อตอน log-in เข้าเครื่อง</li>
+<li>click Next ไปเรื่อย ๆ</li>
+</ul></li>
+</ul>
+<figure>
+<img src="../../images/install_miniconda.gif" alt="" /><figcaption>install_miniconda</figcaption>
+</figure>
+<ul>
+<li>environment path
+<ul>
+<li>คลิ๊ก ขวา ที่ My Computer แล้วเลือก Properties</li>
+<li>เลือก Advance system setting → Advanced → Environment Variables</li>
+<li>เลือก Variable ชื่อ path แล้วเลือก Edit</li>
+<li>คลิ๊ก New แล้วเพิ่ม path ดังนี้<br />
+<code>C:\Users\[USERNAME]\miniconda3</code><br />
+<code>C:\Users\[USERNAME]\miniconda3\Script</code><br />
+<code>C:\Users\[USERNAME]\miniconda3\Library\bin</code></li>
+</ul></li>
+<li>install packages
+<ul>
+<li>ไปที่ start → Anaconda3 → Anaconda Powershell Prompt</li>
+<li>โดยพิมคำสั่ง <code>pip install ipython ipykernel jupyterlab</code></li>
+</ul></li>
+</ul>
+<h2 id="r">R</h2>
+<ul>
+<li>install R
+<ul>
+<li>download <a href="https://cran.r-project.org/bin/windows/base/">R สำหรับ windows</a> และ เปิดไฟล์ installer</li>
+<li>click Next</li>
+<li>click I Agree</li>
+<li>เลือก Just Me และ click Next</li>
+<li>เปลี่ยน Desitnation Folder เป็น <code>C:\Users\[USERNAME]\R\[R-x.x.x]</code> โดยที่ USERNAME หมายถึง ชื่อตอน log-in เข้าเครื่อง</li>
+<li>เลือก install version ตามระบบของ windows คือ เลือก 32 bit หรือ 64 bit อย่างใดอย่างหนึ่ง วิธีการดูว่า windows นั้นเป็นระบบไหน ให้คลิ๊ก ขวา ที่ My Computer แล้วเลือก Properties ดูที่ section system</li>
+<li>click Next ไปเรื่อย ๆ</li>
+<li><img src="../../images/install_R.gif" title="fig:" alt="install_R" /></li>
+</ul></li>
+<li>environment path
+<ul>
+<li>คลิ๊ก ขวา ที่ My Computer แล้วเลือก Properties</li>
+<li>เลือก Advance system setting → Advanced → Environment Variables</li>
+<li>เลือก Variable ชื่อ path แล้วเลือก Edit</li>
+<li>คลิ๊ก New แล้วเพิ่ม path <code>C:\Users\[USERNAME]\R\[R-x.x.x]\bin\x64</code> โดยที่ x64 หมายถึง version 64 bit</li>
+</ul></li>
+<li>install package
+<ul>
+<li>ไปที่ start → R → R x64 x.x.x</li>
+<li>พิมพ์คำสั่ง <code>install.packages('IRkernel')</code></li>
+<li>พิมพ์คำสั่ง <code>IRkernel::installspec()</code></li>
+</ul></li>
+</ul>
+<h2 id="ทดสอบ-jupyter">ทดสอบ Jupyter</h2>
+<ul>
+<li>ไปที่ start → Anaconda → Anaconda Powershell Prompt</li>
+<li>พิมพ์คำสั่ง <code>jupyter lab</code> defaullt browser จะเปิดขึ้น <code>http://localhost:8888/lab</code></li>
+<li>สร้าง folder ใหม่ ตั้งชื่อว่า demo เป็นต้น</li>
+<li>เลือก R ใน section Notebook</li>
+<li>ลองพิมพ์คำสั่ง</li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">head</span>(mtcars)</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="kw">pairs</span>(<span class="op">~</span><span class="st"> </span>mpg <span class="op">+</span><span class="st"> </span>disp <span class="op">+</span><span class="st"> </span>drat <span class="op">+</span><span class="st"> </span>wt, <span class="dt">data=</span>mtcars,</span>
+<span id="cb1-3"><a href="#cb1-3"></a>    <span class="dt">main=</span><span class="st">&quot;Simple Scatterplot Matrix&quot;</span>)</span></code></pre></div>
+</div>
+
+    
+    
+    
+
+    
+    
+
+</main>
+
+        <footer>
+            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a>.</p>
+        </footer>
+
+        
+
+        
+    </body>
+
+</html>
+
