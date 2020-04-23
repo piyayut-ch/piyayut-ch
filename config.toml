@@ -3,7 +3,7 @@ relativeurls = true
 languageCode = "en-us"
 title = "Piyayut Chitchumnong"
 theme = "minimal"
-# disqusShortname = "username" # delete this to disable disqus comments
+disqusShortname = "piyayutch" # delete this to disable disqus comments
 # googleAnalytics = ""
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$", ".ipynb_checkpoints"]
 
