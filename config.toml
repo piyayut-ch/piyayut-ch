@@ -1,12 +1,13 @@
-baseURL = "http://example.com/"
+baseURL = "/"
+relativeurls = true
 languageCode = "en-us"
 title = "Piyayut Chitchumnong"
 theme = "minimal"
 # disqusShortname = "username" # delete this to disable disqus comments
-googleAnalytics = ""
-ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
+# googleAnalytics = ""
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$", ".ipynb_checkpoints"]
 
-  
+
 [params]
     author = "Piyayut Chitchumnong"
     description = "Economist & Data Scientist"
