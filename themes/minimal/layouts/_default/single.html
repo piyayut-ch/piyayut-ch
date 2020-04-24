@@ -8,8 +8,14 @@
         {{ partial "tags" . }}
     </div>
 
-    <div align="start" class="content">{{ .Content }}</div>
+    <div align="start" class="content">
+        {{ .Content }}
+    </div>
 
+    <aside>
+        {{ .TableOfContents }}
+    </aside>
+  
 </main>
 
 {{ partial "footer" . }}

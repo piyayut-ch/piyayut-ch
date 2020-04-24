@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>dataio on Piyayut Chitchumnong</title>
+    <link>/tags/dataio/</link>
+    <description>Recent content in dataio on Piyayut Chitchumnong</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 24 Apr 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/dataio/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>การนำเข้าข้อมูล R</title>
+      <link>/post/2020-04-24-import-data/</link>
+      <pubDate>Fri, 24 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2020-04-24-import-data/</guid>
+      <description>หัวข้อ 1นี่คือตัวอย่างเอกสารที่สร้างจาก Rmarkdown
+mtcars## mpg cyl disp hp drat wt qsec vs am gear carb## Mazda RX4 21.0 6 160.0 110 3.90 2.620 16.46 0 1 4 4## Mazda RX4 Wag 21.0 6 160.0 110 3.90 2.875 17.02 0 1 4 4## Datsun 710 22.8 4 108.0 93 3.85 2.320 18.61 1 1 4 1## Hornet 4 Drive 21.4 6 258.0 110 3.</description>
+    </item>
+    
+  </channel>
+</rss>

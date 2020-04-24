@@ -3,8 +3,8 @@ relativeurls = true
 languageCode = "en-us"
 title = "Piyayut Chitchumnong"
 theme = "minimal"
-disqusShortname = "piyayutch" # delete this to disable disqus comments
-# googleAnalytics = ""
+#disqusShortname = "piyayutch" # delete this to disable disqus comments
+googleAnalytics = "UA-164446150-1"
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$", ".ipynb_checkpoints"]
 
 
@@ -21,7 +21,49 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$", ".ipynb_checkpo
     highlightLanguages = ["go", "haskell", "kotlin", "scala", "swift", "r"]
 
 [markup]
-  defaultMarkdownHandler = "pandoc"
+  defaultMarkdownHandler = "goldmark"
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      definitionList = true
+      footnote = true
+      linkify = true
+      strikethrough = true
+      table = true
+      taskList = true
+      typographer = true
+    [markup.goldmark.parser]
+      attribute = true
+      autoHeadingID = true
+      autoHeadingIDType = "github"
+    [markup.goldmark.renderer]
+      hardWraps = false
+      unsafe = true
+      xhtml = false
+  [markup.blackFriday]
+    angledQuotes = false
+    footnoteAnchorPrefix = ""
+    footnoteReturnLinkContents = ""
+    fractions = true
+    hrefTargetBlank = false
+    latexDashes = true
+    nofollowLinks = false
+    noreferrerLinks = false
+    plainIDAnchors = true
+    skipHTML = false
+    smartDashes = true
+    smartypants = true
+    smartypantsQuotesNBSP = false
+    taskLists = true
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ""
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = true
+    style = "dracula"
+    tabWidth = 4
   [markup.tableOfContents]
     endLevel = 2
     ordered = false
@@ -47,6 +89,11 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$", ".ipynb_checkpo
     name = "Projects"
     weight = 4
 
+[[menu.main]]
+    url = "/links/"
+    name = "Links"
+    weight = 5
+    
 # Social icons to be shown on the right-hand side of the navigation bar.
 # The "name" field should match the name of the icon in Font Awesome.
 # The list of available icons can be found at http://fontawesome.io/icons.
@@ -66,12 +113,12 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$", ".ipynb_checkpo
     name = "twitter"
     weight = 3
 
-[[menu.icon]]
-    url = "https://www.linkedin.com/in/username/"
-    name = "linkedin"
-    weight = 4
+#[[menu.icon]]
+#    url = "https://www.linkedin.com/in/username/"
+#    name = "linkedin"
+#    weight = 4
 
-[[menu.icon]]
-    url = "https://www.stackoverflow.com/username/"
-    name = "stack-overflow"
-    weight = 5
+#[[menu.icon]]
+#    url = "https://www.stackoverflow.com/username/"
+#    name = "stack-overflow"
+#    weight = 5

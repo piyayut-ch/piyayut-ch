@@ -4,7 +4,7 @@ title: ปิยยุทธ จิตต์จำนงค์ (อุ้ย)
 ---
 
 <p align="center"> 
-<img src="../images/me_300x300.png">
+<img src="images/me_300x300.png">
 </p>
 <br>
 

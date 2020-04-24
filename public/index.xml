@@ -6,7 +6,7 @@
     <description>Recent content on Piyayut Chitchumnong</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 22 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 24 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
@@ -21,14 +21,44 @@
     </item>
     
     <item>
+      <title>การนำเข้าข้อมูลเข้าสู่ R</title>
+      <link>/post/2020-04-24-data-import/</link>
+      <pubDate>Fri, 24 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2020-04-24-data-import/</guid>
+      <description>เกริ่นขั้นตอนแรกของการวิเคราะห์ข้อมูล คือ การนำเข้าข้อมูลเข้าสู่โปรแกรม (data import) ข้อมูลนั้นเราเป็นคนบันทึกเองหรือคนอื่นบันทึกก็ได้ ข้อมูลถูกจัดเก็บในหลายรูปแบบ ที่เราคุ้นเคยกันก็มีข้อมูลที่ถูกจัดเก็บในรูปแบบตาราง หรือspreadsheet เช่น microsoft excel หรือ google sheet RStudio ได้ทำสรุปคำสั่งต่าง ๆ ที่ใช้นำเข้าข้อมูลไว้ที่cheatsheet(cheatsheet จริง ๆ ก็คือ โพยเวลาเราจดเข้าห้องสอบนั่นเอง เราจะจดแบบกระชับ อยู่ในกระดาษ 1-2หน้า เห็นแล้วเข้าใจได้เลย ซึ่งมันดีมาก ๆ เลย มี cheatsheet เจ๋งๆ อีกหลายอันเลยสนใจคลิ๊ก)
+สารบัญเกริ่นข้อมูลcsvexcelstataapiไฟล์ csvplot(x = mtcars$wt, y = mtcars$mpg)หัวข้อ 2head(mtcars)## mpg cyl disp hp drat wt qsec vs am gear carb## Mazda RX4 21.</description>
+    </item>
+    
+    <item>
       <title>การติดตั้ง R และ Jupyter</title>
       <link>/post/2020-04-22-setup-r/</link>
       <pubDate>Wed, 22 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>/post/2020-04-22-setup-r/</guid>
-      <description>เกริ่น R เป็นภาษาคอมพิวเตอร์ที่นิยมใช้ในการวิเคราะห์ทางสถิติ เศรษฐมิติ รวมถึง Data Science ข้อดีของ R คือ ฟรี และ มี packages ที่มีความสามารถหลากหลาย เช่น Data Wrangling (การจัดการข้อมูล) Data Visualization (การนำเสนอข้อมูลด้วยภาพ) Model (การทำแบบจำลองเพื่อวิเคราะห์หรือพยากรณ์) เป็นต้น
-ในการใช้งานจริง เราจะใช้ R ผ่านเครื่องมือช่วยที่เรียกว่า IDE (Integrated Development Environment) โดยมีความสามารถ เช่น สร้างและแก้ไข script โปรแกรม ประมวลผล แสดงผลทั้งรูปแบบข้อมูลและกราฟฟิก เป็นต้น
-สำหรับ R RStudio เป็น IDE ที่ได้รับความนิยม แต่มีข้อจำกัดในการใช้ตัวห้อยตัวลอยในภาษาไทย ไม่สะดวกต่อการ comment เป็นภาษาไทย ในที่นี้จึงขอแนะนำให้ใช้ R กับ Jupyter ซึ่งเป็น IDE ที่มีข้อดี คือ เป็น web-based interactive notebook สามาถ coding พร้อมทั้งแสดงผลได้ในไฟล์เดียวกัน และยังสามารถใช้ markdown ในการเขียนข้อความอธิบาย ได้อีกด้วย นอกจากนี้ Jupyter ยังสามารถใช้กับภาษาอื่นได้ด้วย (Python Julia หรือ Stata)</description>
+      <description>เกริ่น R เป็นภาษาคอมพิวเตอร์ที่นิยมใช้ในการวิเคราะห์ทางสถิติ เศรษฐมิติ รวมถึง Data Science ข้อดีของ R คือ ฟรี และ มี packages ที่มีความสามารถหลากหลาย เช่น Data Wrangling (การจัดการข้อมูล) Data Visualization (การนำเสนอข้อมูลด้วยภาพ) Model (การทำแบบจำลองเพื่อวิเคราะห์หรือพยากรณ์) เป็นต้น ในการใช้งานจริง เราจะใช้ R ผ่านเครื่องมือช่วยที่เรียกว่า IDE (Integrated Development Environment) โดยมีความสามารถ เช่น สร้างและแก้ไข script โปรแกรม ประมวลผล แสดงผลทั้งรูปแบบข้อมูลและกราฟฟิก เป็นต้น สำหรับ R RStudio เป็น IDE ที่ได้รับความนิยม แต่มีข้อจำกัดในการ ใช้ตัวห้อยตัวลอยในภาษาไทย ไม่สะดวกต่อการเขียนภาษาไทย ในที่นี้จึงขอแนะนำให้ใช้ R กับ Jupyter ซึ่งเป็น IDE อีกตัวหนึ่ง มีข้อดี คือ เป็น web-based interactive notebook สามาถ coding พร้อมทั้งแสดงผลได้ในไฟล์เดียวกัน และยังสามารถใช้ markdown ในการเขียนข้อความอธิบาย ได้อีกด้วย นอกจากนี้ Jupyter ยังสามารถใช้กับภาษาอื่น ได้ด้วย (Python Julia หรือ Stata) ในการติดตั้งแนะนำให้ ติดตั้ง Miniconda ก่อน เพื่อติดตั้ง Jupyter จากนั้นจึงติดตั้ง R พร้อมทั้งติดตั้ง IRkernel เพื่อใช้ R ได้ใน Jupyter</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/links/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/links/</guid>
+      <description>Awesome R Links 
+A curated list of awesome R packages and tools. Inspired by awesome-machine-learning.
+for Top 50 CRAN downloaded packages or repos with 400+ Awesome R  2020 2019 2018 Integrated Development Environments Syntax Data Manipulation Graphic Displays Html Widgets Reproducible Research Web Technologies and Services Parallel Computing High Performance Language API Database Management Machine Learning Natural Language Processing Bayesian Optimization Finance Bioinformatics and Biostatistics Network Analysis Spatial R Development Logging Data Packages Other Tools Other Interpreters Learning R   Resources  Websites Books Podcasts Reference Cards MOOCs Lists   Other Awesome Lists Contributing  2020  VSCode - vscode-R + vscode-r-lsp VSCode R Langauage Support gt - Easily generate information-rich, publication-quality tables from R  2019  ggforce - ggplot2 extension framework  rayshader - 2D and 3D data visualizations via rgl  vroom - Fast reading of delimited files   Integrated Development Environments Integrated Development Environment</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/links1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/links1/</guid>
+      <description>Awesome R Links 
+A curated list of awesome R packages and tools. Inspired by awesome-machine-learning.
+for Top 50 CRAN downloaded packages or repos with 400+ Awesome R  2020 2019 2018 Integrated Development Environments Syntax Data Manipulation Graphic Displays Html Widgets Reproducible Research Web Technologies and Services Parallel Computing High Performance Language API Database Management Machine Learning Natural Language Processing Bayesian Optimization Finance Bioinformatics and Biostatistics Network Analysis Spatial R Development Logging Data Packages Other Tools Other Interpreters Learning R   Resources  Websites Books Podcasts Reference Cards MOOCs Lists   Other Awesome Lists Contributing  2020  VSCode - vscode-R + vscode-r-lsp VSCode R Langauage Support gt - Easily generate information-rich, publication-quality tables from R  2019  ggforce - ggplot2 extension framework  rayshader - 2D and 3D data visualizations via rgl  vroom - Fast reading of delimited files   Integrated Development Environments Integrated Development Environment</description>
     </item>
     
     <item>
@@ -37,11 +67,10 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/about/</guid>
-      <description>“คุณพ่อลูกอ่อน” ข้าราชการกระทรวงเกษตรและสหกรณ์ นักวิชาการ และนักวิจัย จบการศึกษาปริญญาตรีด้านเศรษฐศาสตร์จากมหาวิทยาลัยธรรมศาสตร์ และปริญญาโทด้านเศรฐศาสตร์เกษตร อาหาร และทรัพยากรธรรมชาติ จากมหาวิทยาัลมิชิแกนสเตท ปัจจุบันทำงานที่ส่วนวิทยาศาสตร์ข้อมูลและปัญญาประดิษฐ์ ศูนย์ข้อมูลเกษตรแห่งชาติ (NABC) สำนักงานเศรษฐกิจการเกษตร เศรษฐศาสตร์ เป็นวิชาที่มีเสน่ห์สำหรับผมมาก ๆ เพราะเป็นวิชาที่พยายามเข้าใจคน ด้วยมุมมองที่น่าสนใจ เศรษฐศาสตร์มองว่าคนว่าเห็นแก่ตัว ตัดสินเพื่อให้ตัวเองได้ประโยชน์ หรือความพึงพอใจสูงสุด ภายใต้ข้อจำกัด และกฎ กติกา ที่เขาเผชิญอยู่
- สิ่งที่มหัศจรรย์ คือ เราสามารถ “ออกแบบ” กฎ กติกา ที่ทำให้คนที่เห็นแก่ตัว ตัดสินใจทำในสิ่งสังคมต้องการได้
+      <description>&amp;ldquo;คุณพ่อลูกอ่อน&amp;rdquo; ข้าราชการกระทรวงเกษตรและสหกรณ์ นักวิชาการ และนักวิจัย จบการศึกษาปริญญาตรีด้านเศรษฐศาสตร์จากมหาวิทยาลัยธรรมศาสตร์ และปริญญาโทด้านเศรฐศาสตร์เกษตร อาหาร และทรัพยากรธรรมชาติ จากมหาวิทยาัลมิชิแกนสเตท ปัจจุบันทำงานที่ส่วนวิทยาศาสตร์ข้อมูลและปัญญาประดิษฐ์ ศูนย์ข้อมูลเกษตรแห่งชาติ (NABC) สำนักงานเศรษฐกิจการเกษตร เศรษฐศาสตร์ เป็นวิชาที่มีเสน่ห์สำหรับผมมาก ๆ เพราะเป็นวิชาที่พยายามเข้าใจคน ด้วยมุมมองที่น่าสนใจ เศรษฐศาสตร์มองว่าคนว่าเห็นแก่ตัว ตัดสินเพื่อให้ตัวเองได้ประโยชน์ หรือความพึงพอใจสูงสุด ภายใต้ข้อจำกัด และกฎ กติกา ที่เขาเผชิญอยู่
+ สิ่งที่มหัศจรรย์ คือ เราสามารถ &amp;ldquo;ออกแบบ&amp;rdquo; กฎ กติกา ที่ทำให้คนที่เห็นแก่ตัว ตัดสินใจทำในสิ่งสังคมต้องการได้
  ศาสตราจารย์ Alvin E. Roth แห่งมหาวิทยาลัยสแตนฟอร์ด (รางวัลโนเบล เมื่อปี 2012) ได้เขียนบทความที่ใช้ชื่อว่า Economist as Engineer หรือแปลเป็นไทยว่า เศรษฐกร คือ วิศวกร (ทางด้านสังคม) หากสนใจ แนะนำให้ดูการพูดของ อ.พัชรสุทธิ์ สุจริตตานนท์ ได้ที่นี่
-
-ผมมีความสนใจด้านการประยุกต์ใช้แนวคิดทางเศรษฐศาสตร์ กับ การแก้ไขปัญหาที่เกี่ยวข้องกับธรรมชาติ ประเด็นที่น่าสนใจ คือ การตัดสินใจของมนุษย์ส่งผลกระทบต่อระบบนิเวศน์ของธรรมชาติ ในขณะเดียวกันสภาวะทางธรรมชาติ ก็ส่งผลต่อการตัดสินใจของเรา เช่น ปัญหา PM2.5 ปัญหาโรคระบาด การพิจารณาแก้ไขปัญหาด้วยวิทยาศาสตร์โดยไม่คำนึงถึงการตัดสินใจของคน ทำให้เราไม่สามารถแก้ปัญหาได้อย่างมีประสิทธิภาพ และยั่งยืน</description>
+ผมมีความสนใจด้านการประยุกต์ใช้แนวคิดทางเศรษฐศาสตร์ กับ การแก้ไขปัญหาที่เกี่ยวข้องกับธรรมชาติ ประเด็นที่น่าสนใจ คือ การตัดสินใจของมนุษย์ส่งผลกระทบต่อระบบนิเวศน์ของธรรมชาติ ในขณะเดียวกันสภาวะทางธรรมชาติ ก็ส่งผลต่อการตัดสินใจของเรา เช่น ปัญหา PM2.5 ปัญหาโรคระบาด การพิจารณาแก้ไขปัญหาด้วยวิทยาศาสตร์โดยไม่คำนึงถึงการตัดสินใจของคน ทำให้เราไม่สามารถแก้ปัญหาได้อย่างมีประสิทธิภาพ และยั่งยืน เป็นที่น่าสนใจว่าโจทย์ของการแก้ไขปัญหา ดังกล่าวมีลักษณะมีความซับซ้อน มีพลวัตร การตอบสนองระหว่างการตัดสินใจ ของเรากับสภาพแวดล้อม ปัจจัยหลายอย่างที่เราไม่รู้หรือมองไม่เห็น ปัญหาในลักษณะนี้ มีความคล้ายกับ **Reinforcement Learning** ในศาสตร์ของ **Artificial Intelligence (AI)** ซึ่งประยุกต์ใช้กับหุ่นยนต์ เช่น รถยนต์ที่ขับเคลื่อนอัตนโมมัติ เลยทำให้สนใจเรื่อง **AI/ Machine Learning/ Data Science** และทำให้ผมได้มีโอกาสรู้จักกับภาษาโปรแกรมมิ่ง `python` และ `R` ผมเลยทำบล็อกนี้ขึ้นมาเพื่อโพสต์บทความเกี่ยวกับการใช้โปรแกรมทั้งสอง ในการวิเคราะห์ข้อมูล Data Visualization และอื่นๆ ความตั้งใจส่วนหนึ่ง คือ ทำบันทึกเก็บเอาไว้สำหรับตัวเอง อีกส่วนหนึ่ง คือ เผยแพร่ให้ผู้ที่สนใจในการเขียนโปรแกรม โดยหลักๆ ผมจะใช้ `R` ในการจัดการข้อมูล ทำกราฟ และวิเคราะห์ด้วยแบบจำลองทางเศรษฐมิติ รวมถึงทำ dashboard และ **website นี้ด้วย** ส่วน `python` ผมใช้ในการวิเคราะห์ทาง Machine Learning เวลาว่างผมชอบดูกีฬา (ฟุตบอล อเมริกันฟุตบอล บาสเก็ตบอล) ซีรีส์ หนัง ใครสนใจเหมือนกันทักกันมาได้ครับ</description>
     </item>
     
   </channel>

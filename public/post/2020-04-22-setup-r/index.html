@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
     <head>
+        <base href="../../"> 
         
 
         <meta charset="utf-8">
@@ -72,6 +73,14 @@
         
 
         
+            <script async src="https://www.googletagmanager.com/gtag/js?id=UA-164446150-1"></script>
+            <script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments)};
+              gtag('js', new Date());
+              gtag('config', 'UA-164446150-1');
+            </script>
+        
 
         
             <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
@@ -106,6 +115,8 @@
                             
                                 <li><a href="../../project/">Projects</a></li>
                             
+                                <li><a href="../../links/">Links</a></li>
+                            
                         </ul>
                     
                     
@@ -116,10 +127,6 @@
                                 <li class="navbar-icon"><a href="https://github.com/piyayut-ch/"><i class="fa fa-github"></i></a></li>
                             
                                 <li class="navbar-icon"><a href="https://twitter.com/piyayutch/"><i class="fa fa-twitter"></i></a></li>
-                            
-                                <li class="navbar-icon"><a href="https://www.linkedin.com/in/username/"><i class="fa fa-linkedin"></i></a></li>
-                            
-                                <li class="navbar-icon"><a href="https://www.stackoverflow.com/username/"><i class="fa fa-stack-overflow"></i></a></li>
                             
                         </ul>
                     
@@ -138,74 +145,108 @@
 
 <a href="../../tags/jupyter"><kbd class="item-tag">Jupyter</kbd></a>
 
+<a href="../../tags/miniconda"><kbd class="item-tag">miniconda</kbd></a>
+
+<a href="../../tags/tutorial"><kbd class="item-tag">tutorial</kbd></a>
+
 
     </div>
 
-    <div align="start" class="content"><h2 id="เกริ่น">เกริ่น</h2>
-<p><code>R</code> เป็นภาษาคอมพิวเตอร์ที่นิยมใช้ในการวิเคราะห์ทางสถิติ เศรษฐมิติ รวมถึง Data Science ข้อดีของ <code>R</code> คือ <strong>ฟรี</strong> และ มี <strong>packages</strong> ที่มีความสามารถหลากหลาย เช่น Data Wrangling (การจัดการข้อมูล) Data Visualization (การนำเสนอข้อมูลด้วยภาพ) Model (การทำแบบจำลองเพื่อวิเคราะห์หรือพยากรณ์) เป็นต้น</p>
-<p>ในการใช้งานจริง เราจะใช้ <code>R</code> ผ่านเครื่องมือช่วยที่เรียกว่า IDE (Integrated Development Environment) โดยมีความสามารถ เช่น สร้างและแก้ไข script โปรแกรม ประมวลผล แสดงผลทั้งรูปแบบข้อมูลและกราฟฟิก เป็นต้น</p>
-<p>สำหรับ <code>R</code> <a href="https://rstudio.com">RStudio</a> เป็น IDE ที่ได้รับความนิยม แต่มีข้อจำกัดในการใช้ตัวห้อยตัวลอยในภาษาไทย ไม่สะดวกต่อการ comment เป็นภาษาไทย ในที่นี้จึงขอแนะนำให้ใช้ <code>R</code> กับ <a href="https://jupyter.org">Jupyter</a> ซึ่งเป็น IDE ที่มีข้อดี คือ เป็น web-based interactive notebook สามาถ coding พร้อมทั้งแสดงผลได้ในไฟล์เดียวกัน และยังสามารถใช้ <code>markdown</code> ในการเขียนข้อความอธิบาย ได้อีกด้วย นอกจากนี้ <code>Jupyter</code> ยังสามารถใช้กับภาษาอื่นได้ด้วย (<code>Python</code> <code>Julia</code> หรือ <code>Stata</code>)</p>
-<p>ในการติดตั้งแนะนำให้ ติดตั้ง <code>Miniconda</code> ก่อน เพื่อติดตั้ง <code>Jupyter</code> จากนั้นจึงติดตั้ง <code>R</code> พร้อมทั้งติดตั้ง IRkernel เพื่อใช้ <code>R</code> ได้ใน <code>Jupyter</code></p>
+    <div align="start" class="content"><h2 id="เกรน">เกริ่น</h2>
+<p><code>R</code> เป็นภาษาคอมพิวเตอร์ที่นิยมใช้ในการวิเคราะห์ทางสถิติ เศรษฐมิติ รวมถึง Data Science ข้อดีของ 
+<code>R</code> คือ <strong>ฟรี</strong> และ มี <strong>packages</strong> ที่มีความสามารถหลากหลาย เช่น Data Wrangling 
+(การจัดการข้อมูล) Data Visualization (การนำเสนอข้อมูลด้วยภาพ) Model 
+(การทำแบบจำลองเพื่อวิเคราะห์หรือพยากรณ์) เป็นต้น <br><br></p>
+<p>ในการใช้งานจริง  เราจะใช้ <code>R</code> ผ่านเครื่องมือช่วยที่เรียกว่า IDE (Integrated Development Environment) 
+โดยมีความสามารถ เช่น สร้างและแก้ไข script โปรแกรม ประมวลผล แสดงผลทั้งรูปแบบข้อมูลและกราฟฟิก เป็นต้น <br><br></p>
+<p>สำหรับ <code>R</code> <a href="https://rstudio.com">RStudio</a> เป็น IDE ที่ได้รับความนิยม แต่มีข้อจำกัดในการ
+ใช้ตัวห้อยตัวลอยในภาษาไทย ไม่สะดวกต่อการเขียนภาษาไทย ในที่นี้จึงขอแนะนำให้ใช้ <code>R</code> กับ
+<a href="https://jupyter.org">Jupyter</a> ซึ่งเป็น IDE อีกตัวหนึ่ง มีข้อดี คือ เป็น web-based 
+interactive notebook สามาถ coding พร้อมทั้งแสดงผลได้ในไฟล์เดียวกัน และยังสามารถใช้ 
+<code>markdown</code> ในการเขียนข้อความอธิบาย ได้อีกด้วย นอกจากนี้ <code>Jupyter</code> ยังสามารถใช้กับภาษาอื่น
+ได้ด้วย (<code>Python</code> <code>Julia</code> หรือ <code>Stata</code>) <br><br></p>
+<p>ในการติดตั้งแนะนำให้ ติดตั้ง <code>Miniconda</code> ก่อน เพื่อติดตั้ง <code>Jupyter</code> จากนั้นจึงติดตั้ง <code>R</code> 
+พร้อมทั้งติดตั้ง IRkernel เพื่อใช้ <code>R</code> ได้ใน <code>Jupyter</code></p>
+<hr>
 <h2 id="miniconda">Miniconda</h2>
 <ul>
 <li>install miniconda
 <ul>
-<li>download <a href="https://docs.conda.io/en/latest/miniconda.html">miniconda3</a> เลือกระหว่าง <code>Miniconda3 Windows 64-bit</code> หรือ <code>Miniconda3 Windows 32-bit</code> โดยดูว่าเครื่องเราใช้ windows system อะไร <img src="../../images/find_os.gif" alt="find_os" /></li>
+<li>download <a href="https://docs.conda.io/en/latest/miniconda.html">miniconda3</a> เลือกระหว่าง 
+<code>Miniconda3 Windows 64-bit</code> หรือ <code>Miniconda3 Windows 32-bit</code> 
+โดยดูว่าเครื่องเราใช้ windows system อะไร
+<img src="images/find_os.gif" alt="find_os"></li>
 <li>เปิดไฟล์ installer</li>
 <li>click Next</li>
 <li>click I Agree</li>
 <li>เลือก Just Me และ click Next</li>
-<li>เปลี่ยน Desitnation Folder เป็น <code>C:\Users\[USERNAME]\Miniconda3</code> โดยที่ USERNAME หมายถึง ชื่อตอน log-in เข้าเครื่อง</li>
+<li>เปลี่ยน Desitnation Folder เป็น <code>C:\Users\[USERNAME]\Miniconda3</code> โดยที่ 
+USERNAME หมายถึง ชื่อตอน log-in เข้าเครื่อง</li>
 <li>click Next ไปเรื่อย ๆ</li>
-</ul></li>
 </ul>
-<figure>
-<img src="../../images/install_miniconda.gif" alt="" /><figcaption>install_miniconda</figcaption>
-</figure>
+</li>
+</ul>
+<p><img src="images/install_miniconda.gif" alt="install_miniconda"></p>
 <ul>
-<li>environment path
+<li>
+<p>environment path</p>
 <ul>
 <li>คลิ๊ก ขวา ที่ My Computer แล้วเลือก Properties</li>
 <li>เลือก Advance system setting → Advanced → Environment Variables</li>
 <li>เลือก Variable ชื่อ path แล้วเลือก Edit</li>
-<li>คลิ๊ก New แล้วเพิ่ม path ดังนี้<br />
-<code>C:\Users\[USERNAME]\miniconda3</code><br />
-<code>C:\Users\[USERNAME]\miniconda3\Script</code><br />
+<li>คลิ๊ก New แล้วเพิ่ม path ดังนี้<br>
+<code>C:\Users\[USERNAME]\miniconda3</code><br>
+<code>C:\Users\[USERNAME]\miniconda3\Script</code><br>
 <code>C:\Users\[USERNAME]\miniconda3\Library\bin</code></li>
-</ul></li>
-<li>install packages
+</ul>
+</li>
+<li>
+<p>install packages</p>
 <ul>
 <li>ไปที่ start → Anaconda3 → Anaconda Powershell Prompt</li>
 <li>โดยพิมคำสั่ง <code>pip install ipython ipykernel jupyterlab</code></li>
-</ul></li>
 </ul>
+</li>
+</ul>
+<hr>
 <h2 id="r">R</h2>
 <ul>
-<li>install R
+<li>
+<p>install R</p>
 <ul>
-<li>download <a href="https://cran.r-project.org/bin/windows/base/">R สำหรับ windows</a> และ เปิดไฟล์ installer</li>
+<li>download <a href="https://cran.r-project.org/bin/windows/base/">R สำหรับ windows</a> 
+และ เปิดไฟล์ installer</li>
 <li>click Next</li>
 <li>click I Agree</li>
 <li>เลือก Just Me และ click Next</li>
-<li>เปลี่ยน Desitnation Folder เป็น <code>C:\Users\[USERNAME]\R\[R-x.x.x]</code> โดยที่ USERNAME หมายถึง ชื่อตอน log-in เข้าเครื่อง</li>
-<li>เลือก install version ตามระบบของ windows คือ เลือก 32 bit หรือ 64 bit อย่างใดอย่างหนึ่ง วิธีการดูว่า windows นั้นเป็นระบบไหน ให้คลิ๊ก ขวา ที่ My Computer แล้วเลือก Properties ดูที่ section system</li>
+<li>เปลี่ยน Desitnation Folder เป็น <code>C:\Users\[USERNAME]\R\[R-x.x.x]</code> โดยที่ USERNAME 
+หมายถึง ชื่อตอน log-in เข้าเครื่อง</li>
+<li>เลือก install version ตามระบบของ windows คือ เลือก 32 bit หรือ 64 bit 
+อย่างใดอย่างหนึ่ง วิธีการดูว่า windows นั้นเป็นระบบไหน ให้คลิ๊ก ขวา ที่ My Computer 
+แล้วเลือก Properties ดูที่ section system</li>
 <li>click Next ไปเรื่อย ๆ</li>
-<li><img src="../../images/install_R.gif" title="fig:" alt="install_R" /></li>
-</ul></li>
-<li>environment path
+<li><img src="images/install_R.gif" alt="install_R"></li>
+</ul>
+</li>
+<li>
+<p>environment path</p>
 <ul>
 <li>คลิ๊ก ขวา ที่ My Computer แล้วเลือก Properties</li>
 <li>เลือก Advance system setting → Advanced → Environment Variables</li>
 <li>เลือก Variable ชื่อ path แล้วเลือก Edit</li>
 <li>คลิ๊ก New แล้วเพิ่ม path <code>C:\Users\[USERNAME]\R\[R-x.x.x]\bin\x64</code> โดยที่ x64 หมายถึง version 64 bit</li>
-</ul></li>
-<li>install package
+</ul>
+</li>
+<li>
+<p>install package</p>
 <ul>
 <li>ไปที่ start → R → R x64 x.x.x</li>
 <li>พิมพ์คำสั่ง <code>install.packages('IRkernel')</code></li>
 <li>พิมพ์คำสั่ง <code>IRkernel::installspec()</code></li>
-</ul></li>
 </ul>
+</li>
+</ul>
+<hr>
 <h2 id="ทดสอบ-jupyter">ทดสอบ Jupyter</h2>
 <ul>
 <li>ไปที่ start → Anaconda → Anaconda Powershell Prompt</li>
@@ -214,38 +255,46 @@
 <li>เลือก R ใน section Notebook</li>
 <li>ลองพิมพ์คำสั่ง</li>
 </ul>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">head</span>(mtcars)</span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="kw">pairs</span>(<span class="op">~</span><span class="st"> </span>mpg <span class="op">+</span><span class="st"> </span>disp <span class="op">+</span><span class="st"> </span>drat <span class="op">+</span><span class="st"> </span>wt, <span class="dt">data=</span>mtcars,</span>
-<span id="cb1-3"><a href="#cb1-3"></a>    <span class="dt">main=</span><span class="st">&quot;Simple Scatterplot Matrix&quot;</span>)</span></code></pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#50fa7b">head</span>(mtcars)
+<span style="color:#50fa7b">pairs</span>(<span style="color:#ff79c6">~</span> mpg <span style="color:#ff79c6">+</span> disp <span style="color:#ff79c6">+</span> drat <span style="color:#ff79c6">+</span> wt, data<span style="color:#ff79c6">=</span>mtcars,
+    main<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;Simple Scatterplot Matrix&#34;</span>)
+</code></pre></div></div>
+
+    
+    
+    
+        <h4 class="page-header">Related</h4>
+         <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="../../post/2020-04-24-data-import/">การนำเข้าข้อมูลเข้าสู่ R</a></h4>
+    <h5>April 24, 2020</h5>
+    
+<a href="../../tags/r"><kbd class="item-tag">R</kbd></a>
+
+<a href="../../tags/tidyverse"><kbd class="item-tag">tidyverse</kbd></a>
+
+<a href="../../tags/readxl"><kbd class="item-tag">readxl</kbd></a>
+
+<a href="../../tags/tutorial"><kbd class="item-tag">tutorial</kbd></a>
+
+<a href="../../tags/readxl"><kbd class="item-tag">readxl</kbd></a>
+
+<a href="../../tags/rio"><kbd class="item-tag">rio</kbd></a>
+
+
+
 </div>
-
-    
-    
+ 
     
 
     
-    
-        <h4 class="page-header">Comments</h4>
-        <div id="disqus_thread"></div>
-<script type="application/javascript">
-    var disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "piyayutch" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
     
 
 </main>

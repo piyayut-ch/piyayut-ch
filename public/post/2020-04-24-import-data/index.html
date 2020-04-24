@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>การนำเข้าข้อมูลเข้าสู่ R</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Prompt', sans-serif;
+        background-color: snow;
+    }
+
+    :root {
+        --accent: royalblue;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="../../css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Prompt">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/zenburn.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/r.min.js"></script>
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.69.1" />
+        
+
+        
+            <script async src="https://www.googletagmanager.com/gtag/js?id=UA-164446150-1"></script>
+            <script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments)};
+              gtag('js', new Date());
+              gtag('config', 'UA-164446150-1');
+            </script>
+        
+
+        
+            <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+
+        
+
+    </head>
+
+    <body>
+        
+
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand visible-xs" href="#">การนำเข้าข้อมูลเข้าสู่ R</a>
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse">
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="../../">Home</a></li>
+                            
+                                <li><a href="../../about/">About</a></li>
+                            
+                                <li><a href="../../post/">Posts</a></li>
+                            
+                                <li><a href="../../project/">Projects</a></li>
+                            
+                                <li><a href="../../links/">Links</a></li>
+                            
+                        </ul>
+                    
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="mailto:piyayut.ch@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/piyayut-ch/"><i class="fa fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://twitter.com/piyayutch/"><i class="fa fa-twitter"></i></a></li>
+                            
+                        </ul>
+                    
+                </div>
+            </div>
+        </nav>
+
+
+<main>
+
+    <div>
+        <h2>การนำเข้าข้อมูลเข้าสู่ R</h2>
+        <h5>April 24, 2020</h5>
+        
+<a href="../../tags/r"><kbd class="item-tag">R</kbd></a>
+
+<a href="../../tags/tidyverse"><kbd class="item-tag">tidyverse</kbd></a>
+
+<a href="../../tags/readxl"><kbd class="item-tag">readxl</kbd></a>
+
+<a href="../../tags/tutorial"><kbd class="item-tag">tutorial</kbd></a>
+
+<a href="../../tags/readxl"><kbd class="item-tag">readxl</kbd></a>
+
+<a href="../../tags/rio"><kbd class="item-tag">rio</kbd></a>
+
+
+    </div>
+
+    <div align="start" class="content">
+<script src="../../rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+
+<div id="intro" class="section level2">
+<h2>เกริ่น</h2>
+<p>ขั้นตอนแรกของการวิเคราะห์ข้อมูล คือ การนำเข้าข้อมูลเข้าสู่โปรแกรม (data import) ข้อมูลนั้นเราเป็นคนบันทึกเอง
+หรือคนอื่นบันทึกก็ได้ ข้อมูลถูกจัดเก็บในหลายรูปแบบ ที่เราคุ้นเคยกันก็มีข้อมูลที่ถูกจัดเก็บในรูปแบบตาราง หรือ
+spreadsheet เช่น microsoft excel หรือ google sheet <br><br></p>
+<p>RStudio ได้ทำสรุปคำสั่งต่าง ๆ ที่ใช้นำเข้าข้อมูลไว้ที่
+<a href="https://github.com/rstudio/cheatsheets/raw/master/data-import.pdf">cheatsheet</a>
+(cheatsheet จริง ๆ ก็คือ โพยเวลาเราจดเข้าห้องสอบนั่นเอง เราจะจดแบบกระชับ อยู่ในกระดาษ 1-2
+หน้า เห็นแล้วเข้าใจได้เลย ซึ่งมันดีมาก ๆ เลย มี cheatsheet เจ๋งๆ อีกหลายอันเลย
+<a href="https://rstudio.com/resources/cheatsheets/">สนใจคลิ๊ก</a>)</p>
+</div>
+<div id="toc" class="section level2">
+<h2>สารบัญ</h2>
+<ul>
+<li><a href="#intro">เกริ่น</a></li>
+<li><a href="#data">ข้อมูล</a></li>
+<li><a href="#csv">csv</a></li>
+<li><a href="#excel">excel</a></li>
+<li><a href="#stata">stata</a></li>
+<li><a href="#api">api</a></li>
+<li><a href="#"></a></li>
+</ul>
+</div>
+<div id="csv" class="section level2">
+<h2>ไฟล์ csv</h2>
+<pre class="r"><code>plot(x = mtcars$wt, y = mtcars$mpg)</code></pre>
+<p><img src="../../post/2020-04-24-import-data_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+</div>
+<div id="หัวข้อ-2" class="section level1">
+<h1>หัวข้อ 2</h1>
+<pre class="r"><code>head(mtcars)</code></pre>
+<pre><code>##                    mpg cyl disp  hp drat    wt  qsec vs am gear carb
+## Mazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4
+## Mazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4
+## Datsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1
+## Hornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1
+## Hornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2
+## Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre>
+</div>
+</div>
+
+    
+    
+    
+        <h4 class="page-header">Related</h4>
+         <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="../../post/2020-04-24-data-import/">การนำเข้าข้อมูลเข้าสู่ R</a></h4>
+    <h5>April 24, 2020</h5>
+    
+<a href="../../tags/r"><kbd class="item-tag">R</kbd></a>
+
+<a href="../../tags/tidyverse"><kbd class="item-tag">tidyverse</kbd></a>
+
+<a href="../../tags/readxl"><kbd class="item-tag">readxl</kbd></a>
+
+<a href="../../tags/tutorial"><kbd class="item-tag">tutorial</kbd></a>
+
+<a href="../../tags/readxl"><kbd class="item-tag">readxl</kbd></a>
+
+<a href="../../tags/rio"><kbd class="item-tag">rio</kbd></a>
+
+
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="../../post/2020-04-22-setup-r/">การติดตั้ง R และ Jupyter</a></h4>
+    <h5>April 22, 2020</h5>
+    
+<a href="../../tags/r"><kbd class="item-tag">R</kbd></a>
+
+<a href="../../tags/jupyter"><kbd class="item-tag">Jupyter</kbd></a>
+
+
+
+</div>
+ 
+    
+
+    
+    
+
+</main>
+
+        <footer>
+            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a>.</p>
+        </footer>
+
+        
+
+        
+    </body>
+
+</html>
+
