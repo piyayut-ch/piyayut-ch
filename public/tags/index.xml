@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>pacman</title>
+      <link>/tags/pacman/</link>
+      <pubDate>Fri, 24 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/pacman/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>R</title>
       <link>/tags/r/</link>
       <pubDate>Fri, 24 Apr 2020 00:00:00 +0000</pubDate>
@@ -44,6 +53,15 @@
       <pubDate>Fri, 24 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>/tags/tidyverse/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tips</title>
+      <link>/tags/tips/</link>
+      <pubDate>Fri, 24 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/tips/</guid>
       <description></description>
     </item>
     

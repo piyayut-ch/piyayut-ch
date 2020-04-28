@@ -7,7 +7,6 @@ theme = "minimal"
 googleAnalytics = "UA-164446150-1"
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$", ".ipynb_checkpoints"]
 
-
 [params]
     author = "Piyayut Chitchumnong"
     description = "Economist & Data Scientist"
@@ -76,7 +75,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$", ".ipynb_checkpo
 
 [[menu.main]]
     url = "/about/"
-    name = "About"
+    name = "About Me"
     weight = 2
 
 [[menu.main]]

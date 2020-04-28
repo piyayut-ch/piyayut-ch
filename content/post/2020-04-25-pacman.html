@@ -1,0 +1,78 @@
+---
+title: "โหลด package ด้วย pacman"
+author: "ปิยยุทธ จิตต์จำนงค์"
+date: "2020-04-24"
+lastmod: "2020-04-24"
+categories: ["R"]
+tags: ["R", "pacman", "tips"]
+showtoc: true
+autoCollapseToc: true
+contentCopyright: MIT
+draft: true
+mathjax: true
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+
+<div id="intro" class="section level2">
+<h2>เกริ่น</h2>
+<p>ข้อดีของ R คือ มี package ที่พัฒนามากมาย ดู <a href=".">awesome R</a> package เหล่านี้ไม่ได้มากับ base R
+(package พื้นฐาน ที่มาตอนเราติดตั้ง R โดยจะโหลดให้เราทุกครั้งตอนเวลาเราเปิด R)
+เราต้องติดตั้ง package ก่อนใช้งาน โดยวิธีปกติติดตั้ง ด้วยคำสั่ง
+<code>install.packages('pkg')</code> โดยที่ pkg คือ ชื่อของ package ซึ่งต้องอยู่ในเครื่องหมายคำพูด
+(R เรียกว่า character แต่ภาษาอื่นอาจะเรียกว่า string)
+จริงๆ แล้วหลังจากติดตั้ง package เราสามารถเรียกใช้ได้เลย โดยใช้คำสั่ง <code>pkg::some_function</code></p>
+<p>ยกตัวอย่างเช่น</p>
+<pre class="r"><code># install.packages(&quot;ggplot2&quot;)
+library(ggplot2)
+ggplot(mtcars, aes(x=wt, y=mpg)) +
+  geom_point()</code></pre>
+<p><img src="/post/2020-04-25-pacman_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+</div>
+<div id="pacman" class="section level2">
+<h2>pacman</h2>
+<p>package pacman ในที่นี้ย่อมาจาก package management ไม่ได้หมายถึงเกม pacman นะ</p>
+<pre class="r"><code># if (!require(&quot;pacman&quot;)) install.packages(&quot;pacman&quot;)
+library(pacman)
+pkgs = c(&#39;tidyverse&#39;, &#39;plotly&#39;, &#39;ggthemes&#39;, &#39;hrbrthemes&#39;)
+p_load(pkgs, character.only=TRUE)
+sessionInfo()</code></pre>
+<pre><code>## R version 3.6.3 (2020-02-29)
+## Platform: x86_64-w64-mingw32/x64 (64-bit)
+## Running under: Windows 10 x64 (build 18363)
+## 
+## Matrix products: default
+## 
+## locale:
+## [1] LC_COLLATE=Thai_Thailand.874  LC_CTYPE=Thai_Thailand.874   
+## [3] LC_MONETARY=Thai_Thailand.874 LC_NUMERIC=C                 
+## [5] LC_TIME=Thai_Thailand.874    
+## 
+## attached base packages:
+## [1] stats     graphics  grDevices utils     datasets  methods   base     
+## 
+## other attached packages:
+##  [1] hrbrthemes_0.8.0 ggthemes_4.2.0   plotly_4.9.2     forcats_0.5.0   
+##  [5] stringr_1.4.0    dplyr_0.8.5      purrr_0.3.3      readr_1.3.1     
+##  [9] tidyr_1.0.2      tibble_3.0.0     tidyverse_1.3.0  pacman_0.5.1    
+## [13] ggplot2_3.3.0   
+## 
+## loaded via a namespace (and not attached):
+##  [1] Rcpp_1.0.4        lubridate_1.7.4   lattice_0.20-40   assertthat_0.2.1 
+##  [5] digest_0.6.25     R6_2.4.1          cellranger_1.1.0  backports_1.1.5  
+##  [9] reprex_0.3.0      evaluate_0.14     httr_1.4.1        blogdown_0.18    
+## [13] pillar_1.4.3      gdtools_0.2.1     rlang_0.4.5       lazyeval_0.2.2   
+## [17] readxl_1.3.1      rstudioapi_0.11   data.table_1.12.8 extrafontdb_1.0  
+## [21] rmarkdown_2.1     labeling_0.3      extrafont_0.17    htmlwidgets_1.5.1
+## [25] munsell_0.5.0     broom_0.5.5       compiler_3.6.3    modelr_0.1.6     
+## [29] xfun_0.12         systemfonts_0.1.1 pkgconfig_2.0.3   htmltools_0.4.0  
+## [33] tidyselect_1.0.0  bookdown_0.18     viridisLite_0.3.0 fansi_0.4.1      
+## [37] crayon_1.3.4      dbplyr_1.4.2      withr_2.1.2       grid_3.6.3       
+## [41] Rttf2pt1_1.3.8    nlme_3.1-145      jsonlite_1.6.1    gtable_0.3.0     
+## [45] lifecycle_0.2.0   DBI_1.1.0         magrittr_1.5      scales_1.1.0     
+## [49] cli_2.0.2         stringi_1.4.6     farver_2.0.3      fs_1.3.1         
+## [53] xml2_1.3.0        ellipsis_0.3.0    generics_0.0.2    vctrs_0.2.4      
+## [57] tools_3.6.3       glue_1.4.0        hms_0.5.3         yaml_2.2.1       
+## [61] colorspace_1.4-1  rvest_0.3.5       knitr_1.28        haven_2.2.0</code></pre>
+</div>

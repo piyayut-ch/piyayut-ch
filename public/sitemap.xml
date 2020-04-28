@@ -12,6 +12,11 @@
   </url>
   
   <url>
+    <loc>/tags/pacman/</loc>
+    <lastmod>2020-04-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/</loc>
     <lastmod>2020-04-24T00:00:00+00:00</lastmod>
   </url>
@@ -52,12 +57,22 @@
   </url>
   
   <url>
+    <loc>/tags/tips/</loc>
+    <lastmod>2020-04-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/tags/tutorial/</loc>
     <lastmod>2020-04-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/post/2020-04-24-data-import/</loc>
+    <lastmod>2020-04-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/2020-04-25-pacman/</loc>
     <lastmod>2020-04-24T00:00:00+00:00</lastmod>
   </url>
   
@@ -96,6 +111,10 @@
   
   <url>
     <loc>/project/</loc>
+  </url>
+  
+  <url>
+    <loc>/about-copy1/</loc>
   </url>
   
   <url>
