@@ -694,6 +694,7 @@ R communities and package collections (in alphabetical order):
 * [awesome-awesomeness](https://github.com/bayandin/awesome-awesomeness)
 * [lists](https://github.com/jnv/lists)
 * [awesome-rshiny](https://github.com/grabear/awesome-rshiny)
+* [MUusings' list](https://www.computerworld.com/article/2921176/great-r-packages-for-data-import-wrangling-visualization.html)
 
 # Contributing
 Your contributions are always welcome!
