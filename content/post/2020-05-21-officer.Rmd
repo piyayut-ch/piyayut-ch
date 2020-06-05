@@ -1,0 +1,217 @@
+---
+title: "แนะนำ R package tsbox จัดการข้อมูลอนุกรมเวลา"
+author: "ปิยยุทธ จิตต์จำนงค์"
+date: "2020-05-20"
+lastmod: "2020-05-20"
+categories: ["R"]
+tags: ["R", "tsbox", "Rpackage", "tips", "time series"]
+showtoc: true
+autoCollapseToc: true
+contentCopyright: MIT
+draft: true
+mathjax: true
+---
+
+## เกริ่น {#intro}
+
+
+
+```{r}
+install.packages("officer")
+```
+
+```{r}
+library(officer)
+library(magrittr)
+```
+
+## พื้นฐาน
+1. สร้าง object ที่จัดการไฟล์ word สามารถทำได้ทั้งสร้างขึ้นมาใหม่ หรือ โหลดจากไฟล์ที่มีอยู่แล้ว
+2. เพิ่ม/ลด/แก้ไข ใน
+3. บันทึก เป็น word file
+
+```{r}
+my_doc = read_docx()
+styles_info(my_doc)
+```
+
+```{r}
+src <- tempfile(fileext = ".png")
+png(filename = src, width = 5, height = 6, units = 'in', res = 300)
+barplot(1:10, col = 1:10)
+dev.off()
+```
+
+```{r}
+my_doc <- my_doc %>%
+  body_add_img(src = src, width = 5, height = 6, style = "centered") %>%
+  body_add_par("Hello world!", style = "Normal") %>%
+  body_add_par("", style = "Normal") %>% # blank paragraph
+  body_add_table(iris, style = "table_template")
+```
+
+```{r}
+print(my_doc, target = "assets/first_example.docx")
+```
+
+## การเพิ่มส่วนประกอบต่าง ๆ ในเอกสาร
+Add content as a paragraph: images, tables, text. Use body_add_* functions:
+
+body_add_par
+body_add_img
+body_add_table
+body_add_break
+body_add_toc
+body_add_gg
+flextable::body_add_flextable
+
+```{r}
+read_docx() %>% styles_info() %>%
+  subset( style_type %in% "paragraph" )
+```
+
+```{r}
+read_docx('assets/test.docx') %>% docx_bookmarks()
+```
+
+```{r}
+library(ggplot2)
+library(flextable)
+
+gg <- ggplot(data = iris, aes(Sepal.Length, Petal.Length)) +
+  geom_point()
+ft <- qflextable(head(iris))
+read_docx() %>%
+  body_add_par(value = "Table of content", style = "heading 1") %>%
+  body_add_toc(level = 2) %>%
+  body_add_break() %>%
+
+  body_add_par(value = "dataset iris", style = "heading 2") %>%
+  body_add_flextable(value = ft ) %>%
+
+  body_add_par(value = "plot examples", style = "heading 1") %>%
+  body_add_gg(value = gg, style = "centered" ) %>%
+
+  print(target = "assets/body_add_demo.docx")
+```
+
+```{r}
+str1 <- "Lorem ipsum dolor sit amet, consectetur adipiscing elit. " %>%
+  rep(5) %>% paste(collapse = "")
+str2 <- "Aenean venenatis varius elit et fermentum vivamus vehicula. " %>%
+  rep(5) %>% paste(collapse = "")
+
+my_doc <- read_docx()  %>%
+  body_add_par(value = str1, style = "centered") %>%
+  body_end_section_continuous() %>%
+  body_add_par(value = str2, style = "centered") %>%
+  body_end_section_landscape()
+print(my_doc, target = "assets/landscape_section.docx")
+```
+
+```{r}
+my_doc <- read_docx()  %>%
+  body_end_section_continuous() %>%
+  body_add_par(value = str1, style = "centered") %>%
+  body_add_par(value = str2, style = "centered") %>%
+  slip_in_column_break() %>%
+  body_add_par(value = str2, style = "centered") %>%
+  body_end_section_columns(widths = c(2,2), sep = TRUE, space = 1)
+print(my_doc, target = "assets/columns_section.docx")
+```
+
+```{r}
+my_doc <- read_docx()  %>%
+  body_end_section_continuous() %>%
+  body_add_par(value = str1, style = "Normal") %>%
+  body_add_par(value = str2, style = "Normal") %>%
+  body_end_section_columns_landscape(widths = c(3,3), sep = TRUE, space = 1)
+print(my_doc, target = "assets/columns_landscape_section.docx")
+```
+
+```{r}
+my_doc <- read_docx()  %>%
+  body_end_section_continuous() %>%
+  body_add_par(value = str1, style = "Normal") %>%
+  body_add_par(value = str2, style = "Normal") %>%
+  body_end_section_columns_landscape(widths = c(3,3), sep = TRUE, space = 1)
+print(my_doc, target = "assets/docx/columns_landscape_section.docx")
+
+my_doc <- read_docx()  %>%
+  body_add_par(value = "Default section", style = "heading 1") %>%
+  body_add_par(value = str1, style = "centered") %>%
+  body_add_par(value = str2, style = "centered") %>%
+
+  body_end_section_continuous() %>%
+  body_add_par(value = "Landscape section", style = "heading 1") %>%
+  body_add_par(value = str1, style = "centered") %>%
+  body_add_par(value = str2, style = "centered") %>%
+  body_end_section_landscape() %>%
+
+  body_add_par(value = "Columns", style = "heading 1") %>%
+  body_end_section_continuous() %>%
+  body_add_par(value = str1, style = "centered") %>%
+  body_add_par(value = str2, style = "centered") %>%
+  slip_in_column_break() %>%
+  body_add_par(value = str1, style = "centered") %>%
+  body_end_section_columns(widths = c(2,2), sep = TRUE, space = 1) %>%
+
+  body_add_par(value = str1, style = "Normal") %>%
+  body_add_par(value = str2, style = "Normal") %>%
+  slip_in_column_break() %>%
+  body_end_section_columns_landscape(widths = c(3,3), sep = TRUE, space = 1)
+
+print(my_doc, target = "assets/section.docx")
+```
+
+```{r}
+library(magrittr)
+library(officer)
+library(ggplot2)
+
+gg1 <- ggplot(data = iris, aes(Sepal.Length, Petal.Length)) +
+  geom_point()
+gg2 <- ggplot(data = iris, aes(Sepal.Length, Petal.Length, color = Species)) +
+  geom_point()
+
+
+doc <- read_docx() %>%
+  body_add_par(value = "Table of content", style = "heading 1") %>%
+  body_add_toc(level = 2) %>%
+
+  body_add_par(value = "Tables", style = "heading 1") %>%
+  body_add_par(value = "dataset mtcars", style = "heading 2") %>%
+  body_add_table(value = head(mtcars)[, 1:4], style = "table_template" ) %>%
+  body_add_par(value = "data mtcars", style = "Table Caption") %>%
+  shortcuts$slip_in_tableref(depth = 2) %>%
+
+  body_add_par(value = "dataset iris", style = "heading 2") %>%
+  body_add_table(value = head(iris), style = "table_template" ) %>%
+  body_add_par(value = "data iris", style = "Table Caption") %>%
+  shortcuts$slip_in_tableref(depth = 2) %>%
+
+  body_end_section_portrait() %>%
+
+  body_add_par(value = "plot examples", style = "heading 1") %>%
+  body_add_gg(value = gg1, style = "centered" ) %>%
+  body_add_par(value = "graph example 1", style = "Image Caption") %>%
+  shortcuts$slip_in_plotref(depth = 1) %>%
+
+  body_add_par(value = "plot 2", style = "heading 2") %>%
+  body_add_gg(value = gg2, style = "centered" ) %>%
+  body_add_par(value = "graph example 2", style = "Image Caption") %>%
+  shortcuts$slip_in_plotref(depth = 2) %>%
+
+  body_end_section_landscape() %>%
+
+  body_add_par(value = "Table of tables", style = "heading 2") %>%
+  body_add_toc(style = "Table Caption") %>%
+  body_add_par(value = "Table of graphics", style = "heading 2") %>%
+  body_add_toc(style = "Image Caption")
+
+print(doc, target = "assets/toc_and_captions.docx")
+```
+
+```{r}
+
+```
