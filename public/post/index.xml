@@ -6,44 +6,10 @@
     <description>Recent content in Posts on Piyayut Chitchumnong</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 24 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 22 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>การนำเข้าข้อมูลเข้าสู่ R</title>
-      <link>/post/2020-04-24-data-import/</link>
-      <pubDate>Fri, 24 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/post/2020-04-24-data-import/</guid>
-      <description>เกริ่นขั้นตอนแรกของการวิเคราะห์ข้อมูล คือ การนำเข้าข้อมูลเข้าสู่โปรแกรม (data import) ข้อมูลนั้นเราเป็นคนบันทึกเองหรือคนอื่นบันทึกก็ได้ ข้อมูลถูกจัดเก็บในหลายรูปแบบ ที่เราคุ้นเคยกันก็มีข้อมูลที่ถูกจัดเก็บในรูปแบบตาราง หรือspreadsheet เช่น microsoft excel หรือ google sheet RStudio ได้ทำสรุปคำสั่งต่าง ๆ ที่ใช้นำเข้าข้อมูลไว้ที่cheatsheet(cheatsheet จริง ๆ ก็คือ โพยเวลาเราจดเข้าห้องสอบนั่นเอง เราจะจดแบบกระชับ อยู่ในกระดาษ 1-2หน้า เห็นแล้วเข้าใจได้เลย ซึ่งมันดีมาก ๆ เลย มี cheatsheet เจ๋งๆ อีกหลายอันเลยสนใจคลิ๊ก)
-สารบัญเกริ่นข้อมูลcsvexcelstataapiไฟล์ csvplot(x = mtcars$wt, y = mtcars$mpg)หัวข้อ 2head(mtcars)## mpg cyl disp hp drat wt qsec vs am gear carb## Mazda RX4 21.</description>
-    </item>
-    
-    <item>
-      <title>โหลด package ด้วย pacman</title>
-      <link>/post/2020-04-25-pacman/</link>
-      <pubDate>Fri, 24 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/post/2020-04-25-pacman/</guid>
-      <description>เกริ่นข้อดีของ R คือ มี package ที่พัฒนามากมาย ดู awesome R package เหล่านี้ไม่ได้มากับ base R(package พื้นฐาน ที่มาตอนเราติดตั้ง R โดยจะโหลดให้เราทุกครั้งตอนเวลาเราเปิด R)เราต้องติดตั้ง package ก่อนใช้งาน โดยวิธีปกติติดตั้ง ด้วยคำสั่งinstall.packages(&#39;pkg&#39;) โดยที่ pkg คือ ชื่อของ package ซึ่งต้องอยู่ในเครื่องหมายคำพูด(R เรียกว่า character แต่ภาษาอื่นอาจะเรียกว่า string)จริงๆ แล้วหลังจากติดตั้ง package เราสามารถเรียกใช้ได้เลย โดยใช้คำสั่ง pkg::some_function
-ยกตัวอย่างเช่น
-# install.packages(&amp;quot;ggplot2&amp;quot;)library(ggplot2)ggplot(mtcars, aes(x=wt, y=mpg)) +geom_point()pacmanpackage pacman ในที่นี้ย่อมาจาก package management ไม่ได้หมายถึงเกม pacman นะ
-# if (!require(&amp;quot;pacman&amp;quot;)) install.packages(&amp;quot;pacman&amp;quot;)library(pacman)pkgs = c(&amp;#39;tidyverse&amp;#39;, &amp;#39;plotly&amp;#39;, &amp;#39;ggthemes&amp;#39;, &amp;#39;hrbrthemes&amp;#39;)p_load(pkgs, character.</description>
-    </item>
-    
-    <item>
-      <title>โหลด package ด้วย pacman</title>
-      <link>/post/2020-04-26-data-viz-1/</link>
-      <pubDate>Fri, 24 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/post/2020-04-26-data-viz-1/</guid>
-      <description>เกริ่นข้อดีของ R คือ มี package ที่พัฒนามากมาย ดู awesome R package เหล่านี้ไม่ได้มากับ base R(package พื้นฐาน ที่มาตอนเราติดตั้ง R โดยจะโหลดให้เราทุกครั้งตอนเวลาเราเปิด R)เราต้องติดตั้ง package ก่อนใช้งาน โดยวิธีปกติติดตั้ง ด้วยคำสั่งinstall.packages(&#39;pkg&#39;) โดยที่ pkg คือ ชื่อของ package ซึ่งต้องอยู่ในเครื่องหมายคำพูด(R เรียกว่า character แต่ภาษาอื่นอาจะเรียกว่า string)จริงๆ แล้วหลังจากติดตั้ง package เราสามารถเรียกใช้ได้เลย โดยใช้คำสั่ง pkg::some_function
-ยกตัวอย่างเช่น
-# install.packages(&amp;quot;ggplot2&amp;quot;)library(ggplot2)ggplot(mtcars, aes(x=wt, y=mpg)) +geom_point()pacmanpackage pacman ในที่นี้ย่อมาจาก package management ไม่ได้หมายถึงเกม pacman นะ
-# if (!require(&amp;quot;pacman&amp;quot;)) install.packages(&amp;quot;pacman&amp;quot;)library(pacman)pkgs = c(&amp;#39;tidyverse&amp;#39;, &amp;#39;plotly&amp;#39;, &amp;#39;ggthemes&amp;#39;, &amp;#39;hrbrthemes&amp;#39;)p_load(pkgs, character.</description>
-    </item>
     
     <item>
       <title>การติดตั้ง R และ Jupyter</title>
