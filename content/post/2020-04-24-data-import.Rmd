@@ -8,7 +8,7 @@ tags: ["R", "tidyverse", "readxl", "tutorial", "readxl", "rio"]
 showtoc: true
 autoCollapseToc: true
 contentCopyright: MIT
-draft: true
+draft: false
 mathjax: true
 ---
 
