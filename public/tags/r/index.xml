@@ -43,6 +43,18 @@
     </item>
     
     <item>
+      <title>โหลด package ด้วย pacman</title>
+      <link>/post/2020-04-26-data-viz-1/</link>
+      <pubDate>Fri, 24 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2020-04-26-data-viz-1/</guid>
+      <description>เกริ่นข้อดีของ R คือ มี package ที่พัฒนามากมาย ดู awesome R package เหล่านี้ไม่ได้มากับ base R(package พื้นฐาน ที่มาตอนเราติดตั้ง R โดยจะโหลดให้เราทุกครั้งตอนเวลาเราเปิด R)เราต้องติดตั้ง package ก่อนใช้งาน โดยวิธีปกติติดตั้ง ด้วยคำสั่งinstall.packages(&#39;pkg&#39;) โดยที่ pkg คือ ชื่อของ package ซึ่งต้องอยู่ในเครื่องหมายคำพูด(R เรียกว่า character แต่ภาษาอื่นอาจะเรียกว่า string)จริงๆ แล้วหลังจากติดตั้ง package เราสามารถเรียกใช้ได้เลย โดยใช้คำสั่ง pkg::some_function
+ยกตัวอย่างเช่น
+# install.packages(&amp;quot;ggplot2&amp;quot;)library(ggplot2)ggplot(mtcars, aes(x=wt, y=mpg)) +geom_point()pacmanpackage pacman ในที่นี้ย่อมาจาก package management ไม่ได้หมายถึงเกม pacman นะ
+# if (!require(&amp;quot;pacman&amp;quot;)) install.packages(&amp;quot;pacman&amp;quot;)library(pacman)pkgs = c(&amp;#39;tidyverse&amp;#39;, &amp;#39;plotly&amp;#39;, &amp;#39;ggthemes&amp;#39;, &amp;#39;hrbrthemes&amp;#39;)p_load(pkgs, character.</description>
+    </item>
+    
+    <item>
       <title>การติดตั้ง R และ Jupyter</title>
       <link>/post/2020-04-22-setup-r/</link>
       <pubDate>Wed, 22 Apr 2020 00:00:00 +0000</pubDate>

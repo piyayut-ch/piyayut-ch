@@ -77,6 +77,11 @@
   </url>
   
   <url>
+    <loc>/post/2020-04-26-data-viz-1/</loc>
+    <lastmod>2020-04-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/tags/jupyter/</loc>
     <lastmod>2020-04-22T00:00:00+00:00</lastmod>
   </url>
@@ -97,11 +102,6 @@
   </url>
   
   <url>
-    <loc>/links1/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/tags/flexdashboard/</loc>
   </url>
   
@@ -111,10 +111,6 @@
   
   <url>
     <loc>/project/</loc>
-  </url>
-  
-  <url>
-    <loc>/about-copy1/</loc>
   </url>
   
   <url>
