@@ -1,0 +1,25 @@
+---
+title: "Mobile Application ด้านการเกษตร"
+author: "ปิยยุทธ จิตต์จำนงค์"
+date: "2020-04-24"
+lastmod: "2020-04-24"
+categories: ["R"]
+tags: ["R", "rvest", "mobile-application"]
+showtoc: true
+autoCollapseToc: true
+contentCopyright: MIT
+draft: false
+mathjax: true
+---
+
+```{r, include = FALSE}
+source("R/helpers.R")
+```
+
+```{r, echo = FALSE}
+df <- read_excel("data/app-2-rvest.xlsx")
+tbl_colnames <- c(
+  "", "ชื่อ", "องค์กร", "วันที่ update", 
+   "จำนวนดาวน์โหลด", "คำอธิบาย")
+DT_app(df, colnames = tbl_colnames)
+```
